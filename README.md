@@ -21,14 +21,14 @@ Ouvrez la page **[Releases](https://github.com/benwadub/nomalakon-manual/release
 
 | Vous êtes sur… | Fichier à télécharger |
 |---|---|
-| Mac avec puce Apple (M1, M2, M3, M4…) | `Nomalakon Flasher-1.0.0-mac-arm64.dmg` |
-| Mac Intel | `Nomalakon Flasher-1.0.0-mac-x64.dmg` |
-| Windows 10 ou 11 | `Nomalakon Flasher-1.0.0-win-x64.exe` |
+| Mac avec puce Apple (M1, M2, M3, M4…) | `Nomalakon.Flasher-1.0.0-mac-arm64.dmg` |
+| Mac Intel | `Nomalakon.Flasher-1.0.0-mac-x64.dmg` |
+| Windows 10 ou 11 | `Nomalakon.Flasher-1.0.0-win-x64.exe` |
 
 Pour savoir quel Mac : menu Pomme → **À propos de ce Mac**.  
 « Puce Apple » = fichier **arm64**. « Processeur Intel » = fichier **x64**.
 
-Le fichier arrive en général dans le dossier **Téléchargements**.
+Le fichier arrive en général dans le dossier **Téléchargements**. GitHub écrit le nom avec des **points** (`Nomalakon.Flasher-…`) : c’est bien ce nom-là qu’il faut dans les commandes.
 
 Le logiciel n’est pas signé par Apple ni Microsoft. C’est normal. macOS et Windows affichent un avertissement : suivez exactement les étapes ci-dessous, surtout les commandes Terminal / PowerShell.
 
@@ -44,7 +44,7 @@ Ouvrez **Terminal** : Applications → Utilitaires → Terminal
 **Si vous avez un Mac Apple Silicon (M1 / M2 / M3 / M4),** collez ces 3 lignes, puis Entrée :
 
 ```bash
-hdiutil attach -nobrowse "$HOME/Downloads/Nomalakon Flasher-1.0.0-mac-arm64.dmg"
+hdiutil attach -nobrowse "$HOME/Downloads/Nomalakon.Flasher-1.0.0-mac-arm64.dmg"
 rm -rf "/Applications/Nomalakon Flasher.app"
 cp -R "/Volumes/Nomalakon Flasher 1.0.0-arm64/Nomalakon Flasher.app" /Applications/
 ```
@@ -52,7 +52,7 @@ cp -R "/Volumes/Nomalakon Flasher 1.0.0-arm64/Nomalakon Flasher.app" /Applicatio
 **Si vous avez un Mac Intel,** collez plutôt :
 
 ```bash
-hdiutil attach -nobrowse "$HOME/Downloads/Nomalakon Flasher-1.0.0-mac-x64.dmg"
+hdiutil attach -nobrowse "$HOME/Downloads/Nomalakon.Flasher-1.0.0-mac-x64.dmg"
 rm -rf "/Applications/Nomalakon Flasher.app"
 cp -R "/Volumes/Nomalakon Flasher 1.0.0/Nomalakon Flasher.app" /Applications/
 ```
@@ -106,19 +106,19 @@ Vous refaites les étapes C et D seulement après une mise à jour du logiciel.
 
 ## 4. Installer sur Windows (PowerShell)
 
-1. Téléchargez `Nomalakon Flasher-1.0.0-win-x64.exe` (voir le tableau plus haut).
+1. Téléchargez `Nomalakon.Flasher-1.0.0-win-x64.exe` (voir le tableau plus haut).
 2. Ouvrez **PowerShell** : cliquez le menu Démarrer, tapez `PowerShell`, Entrée.
 
 Collez **cette ligne**, puis Entrée (elle retire le verrou « fichier Internet ») :
 
 ```powershell
-Unblock-File -Path "$env:USERPROFILE\Downloads\Nomalakon Flasher-1.0.0-win-x64.exe"
+Unblock-File -Path "$env:USERPROFILE\Downloads\Nomalakon.Flasher-1.0.0-win-x64.exe"
 ```
 
 Puis lancez l’installeur :
 
 ```powershell
-Start-Process "$env:USERPROFILE\Downloads\Nomalakon Flasher-1.0.0-win-x64.exe"
+Start-Process "$env:USERPROFILE\Downloads\Nomalakon.Flasher-1.0.0-win-x64.exe"
 ```
 
 Si Windows affiche **« Windows a protégé votre PC »** :
